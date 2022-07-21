@@ -1,0 +1,130 @@
+:root {
+    --primary: #2c3333;
+    --secondary:#395B64;
+    --tertiary:#A5C9CA;
+    --fortiary:#E7F6F2;
+    --fifth: #D3DEDC;
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: 'Cormorant SC', serif;
+}
+.row{
+    padding-top: 0;
+    padding-bottom: 0px;
+    
+}
+/* -----------------------------header */
+.header {
+    background-color:var(--tertiary);
+    width: 100%;
+    height: 10%;
+    background-position: absolute;
+    padding: 30px;
+}
+
+.header h1 {
+    font-weight: 500;
+    font-size: 50px;
+    color: var(--fortiary);
+    height: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+a:hover, a:visited, a:link, a:active{
+    text-decoration: none;
+    color: var(--fortiary);
+}
+.main {
+    /* background-image: linear-gradient(#424242, #757575); */
+    background-color: var(--fifth);
+}
+h2 {
+    color: var(--secondary);
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    position: absolute;
+    padding:0 0 5px 10px;
+    font-size: 2rem;
+}
+/* --------------------------------input section */
+.inputs {
+    position: relative;
+    left: 0;
+    top: 10px;
+    text-align: center;
+    display: flex;
+    justify-content: left;
+    width: 20%;
+    padding-left: 40px;
+
+}
+
+.inputs input[type="text"] {
+    height: 3.5rem;
+    width: 30rem;
+    background: var(--primary);
+    font-weight: bold;
+    font-size: 1rem;
+    border: none;
+    background-color: transparent;
+    border-bottom: solid 1px var(--primary);
+    color: var(--tertiary);
+    border-radius: 2px;
+    margin-right:4px ;
+    padding: 4rem 0 2rem 0;
+    
+}
+.inputs input[type="submit"] {
+    height: 40px;
+    width: 60px;
+    background: var(--secondary);
+    color:var(--tertiary);
+    font-size: 16px;
+    border: none;
+    border-radius: 3%;
+    padding: 10px 115px 10px 100px;
+    position: relative;
+    top: 100px;
+    right: 220px;
+
+}
+
+/* -------------------------------display */
+.display {
+    text-align: center;
+    color: var(--fifth);
+}
+.wrapper {
+    margin: 0 9rem;
+    width: 50%;
+    background-color: var(--tertiary);
+    height: 200px;
+    margin: 50px auto;
+    border-radius: 2px;
+    position: relative;
+    right: 1px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+}
+.wrapper h2 {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+}
+.wrapper h2{
+    padding: 5px 0;
+    text-align: center;
+  }
+  .wrapper p{
+    text-align: center;
+    margin:10px 0;
+    font-size:20px;
+  }
