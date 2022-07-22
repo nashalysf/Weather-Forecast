@@ -1,10 +1,12 @@
 //selector variable
-var inputval = document.querySelector('#cityinput')
+var inputval = document.querySelector('#cityinput');
 var btn = document.querySelector('#add');
-var city = document.querySelector('#cityoutput')
-var descrip = document.querySelector('#description')
-var temp = document.querySelector('#temp')
-var wind = document.querySelector('#wind')
+var city = document.querySelector('#cityoutput');
+var descrip = document.querySelector('#description');
+var temp = document.querySelector('#temp');
+var wind = document.querySelector('#wind');
+var inputStorage = document.querySelector('#inputs');
+
 
 apik = "7243ee94aac9ca1d950b59b2d143d442"
 //kelvin to celcious
@@ -17,16 +19,17 @@ function convertion(val){
         .then(res => res.json())
         .then(data => {
             var nameval = data['name']
-            var descrip = data['weather']['0']['description']
             var tempature = data['main']['temp']
             var wndspd = data['wind']['speed']
-
+            var humidity = data['main']['humidity']
+            
             city.innerHTML=`City: ${nameval}`
             temp.innerHTML = `Temperature: ${ convertion(tempature)} C`
-            description.innerHTML = `Conditions: ${descrip}`
-            wind.innerHTML = `Wind Speed: ${wndspd} km/h`
+            description.innerHTML = `Huminity: ${humidity}%`
+            wind.innerHTML = `Wind: ${wndspd} km/h`
 
         })
         .catch(err => alert('Please enter a valid city name'))
-    
+        localStorage.setItem("inputval.value" , "city")
+        
     })
